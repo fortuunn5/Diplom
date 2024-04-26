@@ -1,0 +1,23 @@
+spring:
+  sql:
+    init:
+      mode: always
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123
+    url: jdbc:postgresql://localhost:5432/Diplom
+
+  jpa:
+    hibernate:
+#      ddl-auto: none
+      ddl-auto: create-drop
+
+      logging:
+        level:
+          org:
+            hibernate:
+              SQL: DEBUG
+              type: TRACE
+    defer-datasource-initialization: true
